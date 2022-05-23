@@ -14,6 +14,10 @@ phases:
     - echo Build started on `date`
     - echo Building Java
     - mvn clean
+    - echo Build started on `date`
+   - cd pension-management-system
+   - mvn compile
+   - mvn package -DskipTests
     - echo Building the docker image..
     - docker build -t pms-auth-repository-890387 .
     - docker tag pms-auth-repository-890387:latest 156962844638.dkr.ecr.us-east-1.amazonaws.com/pms-auth-repository-890387:latest
@@ -26,4 +30,4 @@ phases:
     - printf '[{"name":"auth-container","imageUri":"%s"}]' 156962844638.dkr.ecr.us-east-1.amazonaws.com/pms-auth-repository-890387:latest > imagedefinitions.json
 artifacts:
   files:
-  - Authorization-Microservice/imagedefinitions.json
+  - pension-management-system/imagedefinitions.json
