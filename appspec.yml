@@ -3,7 +3,7 @@ Resources:
 - TargetService:
 Type: AWS::ECS::Service
 Properties:
-TaskDefinition: "arn:aws:ecs:us-east-1:156962844638:task-definition/pms-890387-auth-td:5"
+TaskDefinition: "arn:aws:ecs:us-east-1:156962844638:task-definition/pms-890387-auth-td:1"
 LoadBalancerInfo:
 ContainerName: "pms-auth-container-890387"
 ContainerPort: 8400
