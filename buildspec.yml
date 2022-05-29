@@ -9,7 +9,7 @@ phases:
   - aws --version
   - echo Kirthi128 | docker login --username kirthiga --password-stdin
   - TAG="$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | head -c 8)"
-  - IMAGE_URI=156962844638.dkr.ecr.us-east-1.amazonaws.com/pms-auth-repository-890387:${TAG}
+  - IMAGE_URI=156962844638.dkr.ecr.us-east-1.amazonaws.com/890387-pension-auth-repository:${TAG}
  build:
   commands:
   - echo Build started on `date`
@@ -25,7 +25,7 @@ phases:
   - echo Pushing docker image
   - docker push $IMAGE_URI
   - echo push completed
-  - printf '[{"name":"%s","imageUri":"%s"}]' pms-auth-container-890387 $IMAGE_URI > imagedefinitions.json
+  - printf '[{"name":"%s","imageUri":"%s"}]' 890387-pension-auth-container $IMAGE_URI > imagedefinitions.json
 artifacts:
   files:
   - imagedefinitions.json
