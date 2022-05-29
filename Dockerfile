@@ -1,4 +1,4 @@
 FROM adoptopenjdk/openjdk11:alpine-jre
 EXPOSE 8400
-#ADD target/authorization-microservice.jar authorization-microservice.jar
-#ENTRYPOINT ["java","-jar","authorization-microservice.jar"]
+ADD target/pension-management-system.jar pension-management-system.jar
+ENTRYPOINT ["java","-jar","pension-management-system.jar"]
