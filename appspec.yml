@@ -3,8 +3,8 @@ Resources:
 - TargetService:
 Type: AWS::ECS::Service
 Properties:
-TaskDefinition: "arn:aws:ecs:us-east-1:156962844638:task-definition/890387-pms-auth-task-definition:2"
+TaskDefinition: "arn:aws:ecs:us-east-1:156962844638:task-definition/890387-pension-auth-task-definition:1"
 LoadBalancerInfo:
-ContainerName: "pms-auth-container-890387"
+ContainerName: "890387-pension-auth-container"
 ContainerPort: 8400
 PlatformVersion: "LATEST"
